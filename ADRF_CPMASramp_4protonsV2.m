@@ -4,7 +4,7 @@
 %function ADRF_CPMAS_4protons()
 
 % System specification
-[sys,inter]=s2spinach('ADRF_CPMAS_5spins_wDstronger.in');
+[sys,inter]=s2spinach('ADRF_CPMAS_5spins_strongerWd_CH0.2.in');
 
 % Magnet
 sys.magnet=18.8;
