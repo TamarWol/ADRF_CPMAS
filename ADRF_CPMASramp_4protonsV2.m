@@ -1,12 +1,10 @@
 % static ADRF-CP matching condition between 5 protons and one 13C nucleus.
-%
-% Calculation time: minutes
-%
-% i.kuprov@soton.ac.uk
+
+
 %function ADRF_CPMAS_4protons()
 
 % System specification
-[sys,inter]=s2spinach('ADRF_CPMAS_5spins_RAcisplatin.in');
+[sys,inter]=s2spinach('ADRF_CPMAS_5spins_wDstronger.in');
 
 % Magnet
 sys.magnet=18.8;
