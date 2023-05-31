@@ -1,0 +1,98 @@
+spinsys {
+     nuclei 1H 1H 1H 1H 13C
+     channels 1H 13C
+     
+     dipole 1 2 -8000 0 45 0
+     dipole 1 3 -9000 0 0 10
+     dipole 1 4 -11000  20 0 0
+     dipole 2 3 -7500 0 60 60
+     dipole 2 4 -5000 0 10 0
+     dipole 3 4 -7000  90 90 0
+     dipole 1 5 -200 0 0 0 
+}
+
+# SIMPSON is extendable with other TCL packages
+# we use these additional utilities for convenience
+#source ./util.tcl
+
+par {
+  crystal_file          zcw143
+   method                cheby1
+   gamma_angles           4
+   spin_rate             12000
+   sw                    100000
+  variable tsw          1e6/sw
+  variable index        1
+  num_cores            80
+  #number of points for 13C power array
+    np                    112
+  proton_frequency      800e6
+  start_operator  	  I1x+I2x+I3x+I4x+I5x+I6x
+  detect_operator       I7p
+  variable rf           80000.0
+   verbose            	0100
+  conjugate_fid         true
+#ADRF/ARRF power
+  variable w1max        2000
+  #80000.0
+# ADRF/ARRF pulse length
+  variable tp           10000.0
+# number of steps defining the ADRF/ARRF pulses
+  variable step         400
+
+}
+
+proc pulseq {} {
+  global par
+  
+
+#  time increment in ADRF/ARRF                  
+  set dt    [expr $par(tp)/$par(step)]
+# 90 pulse length
+  set p90   [expr 0.25e6/$par(rf)]
+#spin difussion delay
+  set tsd   1000.0
+# ARRF contact time
+  set cp    10000.0
+  
+  matrix set 1 totalcoherence {{0}}
+
+# define propagator for ADRF
+
+  reset
+  pulseid 0 0 0 0 0
+  store 1
+
+  for {set i 1} {$i <= $par(step)} {incr i 1} {
+  set t [expr $i*$dt]
+  set w1 [expr $par(w1max)*($par(tp)-$t)/$par(tp)]
+  reset
+  prop 1
+  pulse $dt $w1 x 0 0
+  store 1
+  }
+
+# loop 13C RF amp 
+
+  for {set p 1} {$p <= $par(np)} {incr p 1} {
+  set wRF [expr (($p-1.0)*250.0)]
+
+# ARRF on x channel
+  reset
+  offset 0 0
+  pulse $cp 0 0 $wRF x
+  store 3
+
+# start of sequence  
+  reset
+  prop 1
+  prop 3
+  acq
+  }                                  
+  }
+  
+proc main {} {
+   global par
+  set f [fsimpson]
+  fsave $f $par(name),$par(index).fid  
+}
