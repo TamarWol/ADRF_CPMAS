@@ -23,12 +23,12 @@ par {
    sw                    100000
   variable tsw          1e6/sw
   variable index        1
-  num_cores            80
+  num_cores            48
   #number of points for 13C power array
     np                    112
   proton_frequency      800e6
-  start_operator  	  I1x+I2x+I3x+I4x+I5x+I6x
-  detect_operator       I7p
+  start_operator  	  I1x+I2x+I3x+I4x
+  detect_operator       I5p
   variable rf           80000.0
    verbose            	0100
   conjugate_fid         true
