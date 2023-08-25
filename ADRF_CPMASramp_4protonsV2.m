@@ -1,4 +1,4 @@
-% static ADRF-CP matching condition between 5 protons and one 13C nucleus.
+% static ADRF-CP matching condition between 4 protons and one 13C nucleus- reading from simpson spin file
 
 
 %function ADRF_CPMAS_4protons()
@@ -27,7 +27,6 @@ parameters.offset=[0 0];
 parameters.grid='rep_2ang_100pts_sph';
 parameters.ramp_amp=2*pi*linspace(0,1.7e3,400);
 parameters.ramp_dt=25e-6;
-%parameters.cw_amp=2*pi*1000*[0:1:30 31:0.5:37.5 38:0.1:42 42.5:0.5:48 49:1:72 73:0.5:77.5 78:0.1:82 82.5:0.5:88 89:1:125]; %linspace(0,50e3,201)
 parameters.cw_amp=2*pi*1000*[0:0.1:1.5 2:0.5:9.5 10:0.1:14 14.5:0.5:21.5 22:0.1:26 26.5:0.5:30]; %linspace(0,50e3,201)
 parameters.arrfsteps=600;
 parameters.initial_amp=0.9;
