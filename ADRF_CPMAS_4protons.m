@@ -1,4 +1,4 @@
-% static ADRF-CP matching condition between 5 protons and one 13C nucleus.
+% static ADRF-CP matching condition between 4 protons and one 13C nucleus using a simpson file for the spin system
 %
 % Calculation time: minutes
 %
