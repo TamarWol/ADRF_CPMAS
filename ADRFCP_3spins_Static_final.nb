@@ -1,0 +1,2943 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     92046,       2935]
+NotebookOptionsPosition[     87132,       2847]
+NotebookOutlinePosition[     87534,       2863]
+CellTagsIndexPosition[     87491,       2860]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"$Path", "=", 
+  RowBox[{"Append", "[", 
+   RowBox[{
+   "$Path", ",", " ", 
+    "\"\<C:\\\\Program Files\\\\SDv3.7.1\\\\SpinDynamica\>\""}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"2aa63143-c97d-497b-b8d3-5360f92f0762"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"C:\\\\Users\\\\tamarw\\\\AppData\\\\Roaming\\\\Mathematica\\\\\
+DocumentationIndices\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\SystemFiles\\\\Links\"\>", 
+   ",", "\<\"C:\\\\Users\\\\tamarw\\\\AppData\\\\Roaming\\\\Mathematica\\\\\
+Kernel\"\>", 
+   ",", "\<\"C:\\\\Users\\\\tamarw\\\\AppData\\\\Roaming\\\\Mathematica\\\\\
+Autoload\"\>", 
+   ",", "\<\"C:\\\\Users\\\\tamarw\\\\AppData\\\\Roaming\\\\Mathematica\\\\\
+Applications\"\>", ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Kernel\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\ProgramData\\\\Mathematica\\\\Applications\"\>", 
+   ",", "\<\".\"\>", ",", "\<\"C:\\\\Users\\\\tamarw\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\AddOns\\\\Packages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\SystemFiles\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\AddOns\\\\Autoload\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\AddOns\\\\Applications\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\AddOns\\\\ExtraPackages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\SystemFiles\\\\Kernel\\\\Packages\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\Documentation\\\\English\\\\System\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\Wolfram Research\\\\Mathematica\\\\12.2\\\
+\\SystemFiles\\\\Data\\\\ICC\"\>", 
+   ",", "\<\"C:\\\\Program Files\\\\SDv3.7.1\\\\SpinDynamica\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.8829799471831026`*^9, 3.9019866440898623`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"cc9531cd-72d9-421b-b2ad-10bba95e4feb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<SpinDynamica`\>\"", "]"}]], "Input",
+ CellChangeTimes->{3.9019975923683376`*^9},
+ CellLabel->"In[2]:=",ExpressionUUID->"04ff80a1-551a-4daa-a0c6-e226cbaf18de"],
+
+Cell[BoxData[
+ TagBox[
+  FrameBox["\<\"SpinDynamica version 3.7.1 loaded by \
+\\!\\(\\*\\nStyleBox[\\\"Mathematica\\\",\\nFontSlant->\\\"Italic\\\"]\\) \
+12.2 running on Microsoft Windows (64-bit).\"\>"],
+  DisplayForm]], "Print",
+ CellChangeTimes->{3.8829799546185555`*^9, 3.901986648017125*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"e0cdc2c8-2dc3-45a7-a300-60cbdc13a160"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetUserLevel", "ini", 
+   "\"The user level is being initialized to \\!\\(\\*RowBox[{\\\"2\\\"}]\\). \
+The user level may be set to an integer between 1 and \
+\\!\\(\\*RowBox[{\\\"3\\\"}]\\) by using SetUserLevel[level]. Low user levels \
+provide strong syntax trapping at the expense of slow execution for some \
+routines. High user levels relax the syntax trapping in order to provide \
+better execution speeds.\"", 2, 2, 1, 17179265972512096975, "Local", 
+   "General`UserLevel`SetUserLevel"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.882979955118436*^9, 3.9019866485562716`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"2e636532-42be-46bc-a833-556f118447ff"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetUserLevel", "ul", 
+   "\"The user level has been set to \\!\\(\\*RowBox[{\\\"2\\\"}]\\).\"", 2, 
+   2, 2, 17179265972512096975, "Local", "General`UserLevel`SetUserLevel"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.882979955118436*^9, 3.9019866486031656`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"c997e513-ac69-495f-888b-c38367b27147"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetUserLevel", "modsymbs", 
+   "\"Additional definitions have been given to the following symbols: \\!\\(\
+\\*RowBox[{\\\"{\\\", RowBox[{\\\"Dot\\\", \\\",\\\", \\\"Duration\\\", \\\",\
+\\\", \\\"Exp\\\", \\\",\\\", \\\"Expand\\\", \\\",\\\", \\\"Plus\\\", \
+\\\",\\\", \\\"Power\\\", \\\",\\\", \\\"Simplify\\\", \\\",\\\", \
+\\\"SolidAngle\\\", \\\",\\\", \\\"Times\\\", \\\",\\\", \\\"WignerD\\\"}], \
+\\\"}\\\"}]\\)\"", 2, 2, 3, 17179265972512096975, "Local", 
+   "General`UserLevel`SetUserLevel"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.882979955118436*^9, 3.9019866486187887`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"e5e7ec5d-767e-4db8-aebf-ddec28f8bc42"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SpinDynamica", "badinfo", 
+   "\"In some cases, requesting information by executing \\\"?<symbol>\\\") \
+generates an infinite loop. I have not been able to identify why this \
+happens. In these cases, readable information on a symbol may be generated by \
+executing \\\"<symbol>::usage\\\". Apologies from MHL.\"", 2, 2, 4, 
+   17179265972512096975, "Local", "Global`SpinDynamica"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.882979955118436*^9, 3.9019866486187887`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"25d44ef3-7996-4d4f-8795-f58b9b00fee8"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.8829799969364395`*^9, {3.8829800490261736`*^9, 
+   3.8829800622845335`*^9}},ExpressionUUID->"f6b7445d-6eaa-4831-8508-\
+35b354d5f2e1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetSpinSystem", "[", "3", "]"}]], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"9e5093a9-0226-4115-abcc-c522cb8e3cb7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetSpinSystem", "set", 
+   "\"the spin system has been set to \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"1\\\", \\\",\\\", \
+FractionBox[\\\"1\\\", \\\"2\\\"]}], \\\"}\\\"}], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"2\\\", \\\",\\\", FractionBox[\\\"1\\\", \\\"2\
+\\\"]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"3\\\", \
+\\\",\\\", FractionBox[\\\"1\\\", \\\"2\\\"]}], \\\"}\\\"}]}], \\\"}\\\"}]\\)\
+\"", 2, 3, 5, 17179265972512096975, "Local", "QM`Hilbert`SetSpinSystem"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.882980006143538*^9, 3.8829800728153877`*^9, 
+  3.9019866524695807`*^9},
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"df148f6d-1edf-4b03-8622-a4e2755c9432"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "SetBasis", "set", 
+   "\"the state basis has been set to \\!\\(\\*RowBox[{\\\"ZeemanBasis\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"1\\\", \\\",\\\", FractionBox[\\\"1\\\", \\\"2\\\"]}], \
+\\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"2\\\", \\\",\\\", \
+FractionBox[\\\"1\\\", \\\"2\\\"]}], \\\"}\\\"}], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{\\\"3\\\", \\\",\\\", FractionBox[\\\"1\\\", \\\"2\
+\\\"]}], \\\"}\\\"}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"BasisLabels\\\", \
+\\\"\[Rule]\\\", \\\"Automatic\\\"}]}], \\\"]\\\"}]\\).\"", 2, 3, 6, 
+   17179265972512096975, "Local", "QM`Hilbert`SetBasis"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.882980006143538*^9, 3.8829800728153877`*^9, 
+  3.901986652485236*^9},
+ CellLabel->
+  "During evaluation of \
+In[3]:=",ExpressionUUID->"e07780aa-8b45-4efb-a028-928e24eb178b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Hrf", "=", 
+  RowBox[{"\[Omega]RF", 
+   RowBox[{"(", 
+    RowBox[{"opI", "[", 
+     RowBox[{"3", ",", "\"\<x\>\""}], "]"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"HdSS", "=", 
+  RowBox[{"\[Omega]SS", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{
+       RowBox[{"opI", "[", 
+        RowBox[{"1", ",", "\"\<z\>\""}], "]"}], ".", 
+       RowBox[{"opI", "[", 
+        RowBox[{"2", ",", "\"\<z\>\""}], "]"}]}]}], "-", 
+     RowBox[{
+      RowBox[{"opI", "[", 
+       RowBox[{"1", ",", "\"\<x\>\""}], "]"}], ".", 
+      RowBox[{"opI", "[", 
+       RowBox[{"2", ",", "\"\<x\>\""}], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"opI", "[", 
+       RowBox[{"1", ",", "\"\<y\>\""}], "]"}], ".", 
+      RowBox[{"opI", "[", 
+       RowBox[{"2", ",", "\"\<y\>\""}], "]"}]}]}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"HdIS", "=", 
+  RowBox[{"\[Omega]IS", 
+   RowBox[{"(", 
+    RowBox[{"2", 
+     RowBox[{
+      RowBox[{"opI", "[", 
+       RowBox[{"1", ",", "\"\<z\>\""}], "]"}], ".", 
+      RowBox[{"opI", "[", 
+       RowBox[{"3", ",", "\"\<z\>\""}], "]"}]}]}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Hamiltonian", "=", 
+  RowBox[{"HdIS", "+", "HdSS", "-", "Hrf"}]}]}], "Input",
+ CellChangeTimes->{
+  3.8829800866342254`*^9, {3.882980833502711*^9, 3.882980925090315*^9}, 
+   3.901986660730268*^9},
+ CellLabel->"In[20]:=",ExpressionUUID->"7645fad9-ee66-43ae-b190-00fdf666c5ac"],
+
+Cell[BoxData[
+ RowBox[{"\[Omega]RF", " ", 
+  TagBox[
+   SubscriptBox["I", 
+    RowBox[{"3", "x"}]],
+   DisplayForm]}]], "Output",
+ CellChangeTimes->{3.8829800895208187`*^9, 3.8829808534057245`*^9, 
+  3.8829809282361593`*^9, 3.901986664389696*^9, 3.901987479814459*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"d6929d39-1a23-436c-b18a-b6b8dfd5274e"],
+
+Cell[BoxData[
+ RowBox[{"\[Omega]SS", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "x"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "x"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}], "-", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "y"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "y"}]],
+       DisplayForm]}],
+     DisplayForm], "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "z"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "z"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.8829800895208187`*^9, 3.8829808534057245`*^9, 
+  3.8829809282361593`*^9, 3.901986664389696*^9, 3.901987479814459*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"60d99751-4a27-4990-8ebf-4570861423d4"],
+
+Cell[BoxData[
+ RowBox[{"2", " ", "\[Omega]IS", " ", 
+  RowBox[{"(", 
+   TagBox[
+    RowBox[{
+     TagBox[
+      SubscriptBox["I", 
+       RowBox[{"1", "z"}]],
+      DisplayForm], 
+     AdjustmentBox["\[Bullet]",
+      BoxMargins->{{-0.3, 0}, {0, 0}}], 
+     TagBox[
+      SubscriptBox["I", 
+       RowBox[{"3", "z"}]],
+      DisplayForm]}],
+    DisplayForm], ")"}]}]], "Output",
+ CellChangeTimes->{3.8829800895208187`*^9, 3.8829808534057245`*^9, 
+  3.8829809282361593`*^9, 3.901986664389696*^9, 3.901987479814459*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"6c97a802-a404-45a2-8402-82eb6cafbe5f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Omega]SS", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "x"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "x"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     TagBox[
+      RowBox[{
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"1", "y"}]],
+        DisplayForm], 
+       AdjustmentBox["\[Bullet]",
+        BoxMargins->{{-0.3, 0}, {0, 0}}], 
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"2", "y"}]],
+        DisplayForm]}],
+      DisplayForm], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}]}], ")"}]}], "+", 
+  RowBox[{"2", " ", "\[Omega]IS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"3", "z"}]],
+       DisplayForm]}],
+     DisplayForm], ")"}]}], "-", 
+  RowBox[{"\[Omega]RF", " ", 
+   TagBox[
+    SubscriptBox["I", 
+     RowBox[{"3", "x"}]],
+    DisplayForm]}]}]], "Output",
+ CellChangeTimes->{3.8829800895208187`*^9, 3.8829808534057245`*^9, 
+  3.8829809282361593`*^9, 3.901986664389696*^9, 3.901987479814459*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"decffcf5-d920-44cc-8cf5-e5a250fad35f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Rho]0", "=", 
+  RowBox[{
+   RowBox[{"2", 
+    RowBox[{
+     RowBox[{"opI", "[", 
+      RowBox[{"1", ",", "\"\<z\>\""}], "]"}], ".", 
+     RowBox[{"opI", "[", 
+      RowBox[{"2", ",", "\"\<z\>\""}], "]"}]}]}], "-", 
+   RowBox[{
+    RowBox[{"opI", "[", 
+     RowBox[{"1", ",", "\"\<x\>\""}], "]"}], ".", 
+    RowBox[{"opI", "[", 
+     RowBox[{"2", ",", "\"\<x\>\""}], "]"}]}], "-", 
+   RowBox[{
+    RowBox[{"opI", "[", 
+     RowBox[{"1", ",", "\"\<y\>\""}], "]"}], ".", 
+    RowBox[{"opI", "[", 
+     RowBox[{"2", ",", "\"\<y\>\""}], "]"}]}]}]}]], "Input",
+ CellLabel->"In[24]:=",ExpressionUUID->"4dde6a83-62a4-4385-8a37-8ed197514f78"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "x"}]],
+       DisplayForm]}],
+     DisplayForm], ")"}]}], "-", 
+  TagBox[
+   RowBox[{
+    TagBox[
+     SubscriptBox["I", 
+      RowBox[{"1", "y"}]],
+     DisplayForm], 
+    AdjustmentBox["\[Bullet]",
+     BoxMargins->{{-0.3, 0}, {0, 0}}], 
+    TagBox[
+     SubscriptBox["I", 
+      RowBox[{"2", "y"}]],
+     DisplayForm]}],
+   DisplayForm], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "z"}]],
+       DisplayForm]}],
+     DisplayForm], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.88298011166212*^9, 3.9019866713346734`*^9, 
+  3.901987485248293*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"7ed3071e-a6a5-4d08-9f9e-ca6e4d09df23"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hrf", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{"I", " ", "t", " ", 
+      RowBox[{"CommutationSuperoperator", "[", "Hrf", "]"}]}], "]"}], "[", 
+    "Hamiltonian", "]"}], "+", "Hrf"}]}]], "Input",
+ CellChangeTimes->{{3.8829809571042776`*^9, 3.882980964932502*^9}, {
+  3.901986681030704*^9, 3.9019866848121667`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"89dcced3-6ab8-423d-b99e-2575b1425ee2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "\[Omega]RF"}], " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"3", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]]}],
+     DisplayForm], ")"}]}], "-", 
+  RowBox[{"\[Omega]SS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]]}],
+     DisplayForm], ")"}]}], "-", 
+  RowBox[{"\[Omega]SS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "y"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "y"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]]}],
+     DisplayForm], ")"}]}], "+", 
+  RowBox[{"2", " ", "\[Omega]SS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]]}],
+     DisplayForm], ")"}]}], "+", 
+  RowBox[{"2", " ", "\[Omega]IS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"3", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]RF", " ", 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "x"}]],
+         DisplayForm]}]]}],
+     DisplayForm], ")"}]}], "+", 
+  RowBox[{"\[Omega]RF", " ", 
+   TagBox[
+    SubscriptBox["I", 
+     RowBox[{"3", "x"}]],
+    DisplayForm]}]}]], "Output",
+ CellChangeTimes->{
+  3.8829802121416707`*^9, 3.882980966694809*^9, 3.901986687690076*^9, {
+   3.901987472097025*^9, 3.901987489786559*^9}},
+ CellLabel->"Out[25]=",ExpressionUUID->"786a1a0a-a7d2-4f2c-9a5a-fbd95e1de3c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hrf", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ExpressOperator", "[", 
+     RowBox[{"Hrf", ",", 
+      RowBox[{"CartesianProductOperatorBasis", "[", "]"}]}], "]"}], "//", 
+    "ExpToTrig"}], "//", "Simplify"}]}]], "Input",
+ CellChangeTimes->{3.8829802231674647`*^9},
+ CellLabel->"In[26]:=",ExpressionUUID->"b4b078ee-3aed-40cc-951c-a19823042022"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "\[Omega]SS"}], " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "x"}]],
+       DisplayForm]}],
+     DisplayForm], ")"}]}], "-", 
+  RowBox[{"\[Omega]SS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "y"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "y"}]],
+       DisplayForm]}],
+     DisplayForm], ")"}]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Omega]SS", " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"\[Omega]IS", " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"t", " ", "\[Omega]RF"}], "]"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"\[Omega]IS", " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]RF"}], "]"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.882980225921471*^9, 3.882980971616746*^9, 
+  3.9019866951804643`*^9, 3.901987495654833*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"28be5192-e865-47f0-9355-a036babae94a"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8829801810371375`*^9, 3.8829802092469053`*^9}},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"15481267-4e90-4cce-b502-ad8ec9027184"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HDO", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "I"}], " ", "t", " ", 
+      RowBox[{"CommutationSuperoperator", "[", "HdSS", "]"}]}], "]"}], "[", 
+    "Hrf", "]"}], "-", "HdSS"}]}]], "Input",
+ CellChangeTimes->{{3.8829809869073277`*^9, 3.882980991569189*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"aee0db42-0179-47cf-a08f-82360bdc51a9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "\[Omega]SS"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "x"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "x"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     TagBox[
+      RowBox[{
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"1", "y"}]],
+        DisplayForm], 
+       AdjustmentBox["\[Bullet]",
+        BoxMargins->{{-0.3, 0}, {0, 0}}], 
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"2", "y"}]],
+        DisplayForm]}],
+      DisplayForm], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}]}], ")"}]}], "-", 
+  RowBox[{"\[Omega]SS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]SS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "x"}]],
+             DisplayForm]}],
+           DisplayForm], "+", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "z"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "z"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]SS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "x"}]],
+             DisplayForm]}],
+           DisplayForm], "+", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "z"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "z"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]]}],
+     DisplayForm], ")"}]}], "-", 
+  RowBox[{"\[Omega]SS", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]SS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "x"}]],
+             DisplayForm]}],
+           DisplayForm], "+", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "z"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "z"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "y"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "y"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]SS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "x"}]],
+             DisplayForm]}],
+           DisplayForm], "+", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "z"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "z"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]]}],
+     DisplayForm], ")"}]}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"\[Omega]SS", " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]SS", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "x"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "x"}]],
+                DisplayForm]}],
+              DisplayForm], "+", 
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "y"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "y"}]],
+                DisplayForm]}],
+              DisplayForm], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               TagBox[
+                RowBox[{
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"1", "z"}]],
+                  DisplayForm], 
+                 AdjustmentBox["\[Bullet]",
+                  BoxMargins->{{-0.3, 0}, {0, 0}}], 
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"2", "z"}]],
+                  DisplayForm]}],
+                DisplayForm], ")"}]}]}], ")"}]}]], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]SS", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "x"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "x"}]],
+                DisplayForm]}],
+              DisplayForm], "+", 
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "y"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "y"}]],
+                DisplayForm]}],
+              DisplayForm], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               TagBox[
+                RowBox[{
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"1", "z"}]],
+                  DisplayForm], 
+                 AdjustmentBox["\[Bullet]",
+                  BoxMargins->{{-0.3, 0}, {0, 0}}], 
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"2", "z"}]],
+                  DisplayForm]}],
+                DisplayForm], ")"}]}]}], ")"}]}]]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"\[Omega]IS", " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"t", " ", "\[Omega]RF"}], "]"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]SS", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "x"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "x"}]],
+                DisplayForm]}],
+              DisplayForm], "+", 
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "y"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "y"}]],
+                DisplayForm]}],
+              DisplayForm], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               TagBox[
+                RowBox[{
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"1", "z"}]],
+                  DisplayForm], 
+                 AdjustmentBox["\[Bullet]",
+                  BoxMargins->{{-0.3, 0}, {0, 0}}], 
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"2", "z"}]],
+                  DisplayForm]}],
+                DisplayForm], ")"}]}]}], ")"}]}]], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]SS", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "x"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "x"}]],
+                DisplayForm]}],
+              DisplayForm], "+", 
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "y"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "y"}]],
+                DisplayForm]}],
+              DisplayForm], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               TagBox[
+                RowBox[{
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"1", "z"}]],
+                  DisplayForm], 
+                 AdjustmentBox["\[Bullet]",
+                  BoxMargins->{{-0.3, 0}, {0, 0}}], 
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"2", "z"}]],
+                  DisplayForm]}],
+                DisplayForm], ")"}]}]}], ")"}]}]]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"\[Omega]IS", " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[ImaginaryI]", " ", "t", " ", "\[Omega]SS", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "x"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "x"}]],
+                DisplayForm]}],
+              DisplayForm], "+", 
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "y"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "y"}]],
+                DisplayForm]}],
+              DisplayForm], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               TagBox[
+                RowBox[{
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"1", "z"}]],
+                  DisplayForm], 
+                 AdjustmentBox["\[Bullet]",
+                  BoxMargins->{{-0.3, 0}, {0, 0}}], 
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"2", "z"}]],
+                  DisplayForm]}],
+                DisplayForm], ")"}]}]}], ")"}]}]], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"-", "\[ImaginaryI]"}], " ", "t", " ", "\[Omega]SS", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "x"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "x"}]],
+                DisplayForm]}],
+              DisplayForm], "+", 
+             TagBox[
+              RowBox[{
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"1", "y"}]],
+                DisplayForm], 
+               AdjustmentBox["\[Bullet]",
+                BoxMargins->{{-0.3, 0}, {0, 0}}], 
+               TagBox[
+                SubscriptBox["I", 
+                 RowBox[{"2", "y"}]],
+                DisplayForm]}],
+              DisplayForm], "-", 
+             RowBox[{"2", " ", 
+              RowBox[{"(", 
+               TagBox[
+                RowBox[{
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"1", "z"}]],
+                  DisplayForm], 
+                 AdjustmentBox["\[Bullet]",
+                  BoxMargins->{{-0.3, 0}, {0, 0}}], 
+                 TagBox[
+                  SubscriptBox["I", 
+                   RowBox[{"2", "z"}]],
+                  DisplayForm]}],
+                DisplayForm], ")"}]}]}], ")"}]}]]}],
+        DisplayForm], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]RF"}], "]"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.882980263355194*^9, {3.8829809933412576`*^9, 3.8829810051344843`*^9}, 
+   3.882981105419952*^9, 3.9019867120053873`*^9, 3.9019875297371945`*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"d54b16c4-14e4-46b7-afe7-e86dec7f5450"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HDO", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ExpressOperator", "[", 
+     RowBox[{"HDO", ",", 
+      RowBox[{"CartesianProductOperatorBasis", "[", "]"}]}], "]"}], "//", 
+    "ExpToTrig"}], "//", "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{{3.8829802898345814`*^9, 3.8829802914641933`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"0419c7a0-8cc7-4c1a-8711-c0f38c3970c1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Omega]IS", " ", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"t", " ", "\[Omega]RF"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]SS"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]SS"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "y"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "x"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "y"}]],
+           DisplayForm]}],
+         DisplayForm]}], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]SS"}], "]"}]}]}], ")"}]}], "+", 
+  RowBox[{"\[Omega]IS", " ", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"t", " ", "\[Omega]RF"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]SS"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]SS"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "y"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "x"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm]}], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]SS"}], "]"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.882980296418682*^9, {3.8829809984106703`*^9, 3.882981017648872*^9}, 
+   3.8829811258969097`*^9, 3.9019867241540675`*^9, 3.901987534878125*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"d18f6b7a-e9f9-4bad-b615-14921e6b5768"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HDOmatch", "=", 
+  RowBox[{"HDO", "/.", 
+   RowBox[{"\[Omega]SS", "\[Rule]", " ", "\[Omega]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8829811369029093`*^9, 3.8829811443398666`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"3f63de1d-7042-4ba4-a658-f6df4cb42b5d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Omega]IS", " ", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"t", " ", "\[Omega]RF"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "y"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "x"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm]}], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]"}], "]"}]}]}], ")"}]}], "+", 
+  RowBox[{"\[Omega]IS", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "y"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "x"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "y"}]],
+           DisplayForm]}],
+         DisplayForm]}], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]"}], "]"}]}]}], ")"}], " ", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"t", " ", "\[Omega]RF"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.8829803174741945`*^9, 3.8829810371224785`*^9, {3.8829811378240147`*^9, 
+   3.882981168031848*^9}, 3.901986735596355*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"ab70c3fe-ca84-4490-b6d6-7ca7992f5d1d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HDOmatch", "=", 
+  RowBox[{"HDOmatch", "/.", 
+   RowBox[{"\[Omega]RF", "\[Rule]", " ", "\[Omega]"}]}]}]], "Input",
+ CellLabel->"In[14]:=",ExpressionUUID->"2a135ffe-cefc-4377-9b87-acf07ac05db0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Omega]IS", " ", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"t", " ", "\[Omega]"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "y"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "x"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "y"}]],
+           DisplayForm]}],
+         DisplayForm]}], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]"}], "]"}]}]}], ")"}]}], "+", 
+  RowBox[{"\[Omega]IS", " ", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"t", " ", "\[Omega]"}], "]"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"t", " ", "\[Omega]"}], "]"}]}], ")"}], " ", 
+      RowBox[{"(", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "z"}]],
+          DisplayForm]}],
+        DisplayForm], ")"}]}], "+", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "y"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "x"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm]}], ")"}], " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"t", " ", "\[Omega]"}], "]"}]}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.8829803278642454`*^9, 3.882981042336234*^9, 
+  3.8829811780219154`*^9, 3.9019867387055063`*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"974c3a0e-31b6-450c-b93b-46d16ba74440"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hav", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"\[Omega]", "/", 
+     RowBox[{"(", 
+      RowBox[{"2", "*", "\[Pi]"}], ")"}]}], ")"}], "*", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{"HDOmatch", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"2", "*", "\[Pi]"}], ")"}], "/", "\[Omega]"}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.8829803602618113`*^9, 3.882980360402008*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"837c9a47-1a75-443f-9d49-e56728bd0c27"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "2"], " ", "\[Omega]IS", " ", 
+  RowBox[{"(", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"3", "z"}]],
+       DisplayForm]}],
+     DisplayForm], "-", 
+    TagBox[
+     RowBox[{
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"3", "z"}]],
+       DisplayForm]}],
+     DisplayForm], "-", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "x"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "y"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "y"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}], "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "y"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "x"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"3", "y"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.8829803645636044`*^9, 3.882981155777381*^9, 
+  3.8829811911729803`*^9, 3.901986746594076*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"eeebb1dd-474d-4889-8237-84b6f1ba3ddf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Rho]t", "=", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{
+     RowBox[{"-", "I"}], " ", "t", " ", 
+     RowBox[{"CommutationSuperoperator", "[", "Hav", "]"}]}], "]"}], "[", 
+   "\[Rho]0", "]"}]}]], "Input",
+ CellLabel->"In[16]:=",ExpressionUUID->"9bbe450c-6dd9-4f6c-a1ac-045816d9750d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox["1", "2"]}], " ", "\[ImaginaryI]", " ", "t", " ", 
+        "\[Omega]IS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "x"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", "t", " ", 
+        "\[Omega]IS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]]}],
+     DisplayForm], ")"}]}], "-", 
+  TagBox[
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], " ", "\[ImaginaryI]", " ", "t", " ", 
+      "\[Omega]IS", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "z"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm], "-", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "z"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}]}], ")"}]}]], 
+    AdjustmentBox["\[Bullet]",
+     BoxMargins->{{-0.3, 0}, {0, 0}}], 
+    TagBox[
+     SubscriptBox["I", 
+      RowBox[{"1", "y"}]],
+     DisplayForm], 
+    AdjustmentBox["\[Bullet]",
+     BoxMargins->{{-0.3, 0}, {0, 0}}], 
+    TagBox[
+     SubscriptBox["I", 
+      RowBox[{"2", "y"}]],
+     DisplayForm], 
+    AdjustmentBox["\[Bullet]",
+     BoxMargins->{{-0.3, 0}, {0, 0}}], 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", "t", " ", 
+      "\[Omega]IS", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"1", "z"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm], "-", 
+        TagBox[
+         RowBox[{
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"2", "z"}]],
+           DisplayForm], 
+          AdjustmentBox["\[Bullet]",
+           BoxMargins->{{-0.3, 0}, {0, 0}}], 
+          TagBox[
+           SubscriptBox["I", 
+            RowBox[{"3", "z"}]],
+           DisplayForm]}],
+         DisplayForm], "-", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}], "+", 
+        RowBox[{"2", " ", 
+         RowBox[{"(", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "y"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "x"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "y"}]],
+             DisplayForm]}],
+           DisplayForm], ")"}]}]}], ")"}]}]]}],
+   DisplayForm], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{"(", 
+    TagBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox["1", "2"]}], " ", "\[ImaginaryI]", " ", "t", " ", 
+        "\[Omega]IS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"1", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      TagBox[
+       SubscriptBox["I", 
+        RowBox[{"2", "z"}]],
+       DisplayForm], 
+      AdjustmentBox["\[Bullet]",
+       BoxMargins->{{-0.3, 0}, {0, 0}}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", "t", " ", 
+        "\[Omega]IS", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"1", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          TagBox[
+           RowBox[{
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"2", "z"}]],
+             DisplayForm], 
+            AdjustmentBox["\[Bullet]",
+             BoxMargins->{{-0.3, 0}, {0, 0}}], 
+            TagBox[
+             SubscriptBox["I", 
+              RowBox[{"3", "z"}]],
+             DisplayForm]}],
+           DisplayForm], "-", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            TagBox[
+             RowBox[{
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"1", "y"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"2", "x"}]],
+               DisplayForm], 
+              AdjustmentBox["\[Bullet]",
+               BoxMargins->{{-0.3, 0}, {0, 0}}], 
+              TagBox[
+               SubscriptBox["I", 
+                RowBox[{"3", "y"}]],
+               DisplayForm]}],
+             DisplayForm], ")"}]}]}], ")"}]}]]}],
+     DisplayForm], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.882980466617866*^9, 3.882981199962105*^9, 
+  3.9019867543416233`*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"71930852-8891-4d5f-821d-d6b1a7bb269d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Rho]t", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ExpressOperator", "[", 
+     RowBox[{"\[Rho]t", ",", 
+      RowBox[{"CartesianProductOperatorBasis", "[", "]"}]}], "]"}], "//", 
+    "ExpToTrig"}], "//", "FullSimplify"}]}]], "Input",
+ CellLabel->"In[17]:=",ExpressionUUID->"047ba63a-df34-4e1e-b02c-94e5b2d5368b"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "4"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"t", " ", "\[Omega]IS"}], "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "x"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "x"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}], "-", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"t", " ", "\[Omega]IS"}], "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "y"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "y"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}], "+", 
+    RowBox[{"8", " ", 
+     RowBox[{"(", 
+      TagBox[
+       RowBox[{
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"1", "z"}]],
+         DisplayForm], 
+        AdjustmentBox["\[Bullet]",
+         BoxMargins->{{-0.3, 0}, {0, 0}}], 
+        TagBox[
+         SubscriptBox["I", 
+          RowBox[{"2", "z"}]],
+         DisplayForm]}],
+       DisplayForm], ")"}]}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"t", " ", "\[Omega]IS"}], "]"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", " ", 
+        RowBox[{"(", 
+         TagBox[
+          RowBox[{
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"1", "z"}]],
+            DisplayForm], 
+           AdjustmentBox["\[Bullet]",
+            BoxMargins->{{-0.3, 0}, {0, 0}}], 
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"2", "z"}]],
+            DisplayForm], 
+           AdjustmentBox["\[Bullet]",
+            BoxMargins->{{-0.3, 0}, {0, 0}}], 
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"3", "x"}]],
+            DisplayForm]}],
+          DisplayForm], ")"}]}], "-", 
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"3", "x"}]],
+        DisplayForm]}], ")"}]}], "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"1", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], "-", 
+       TagBox[
+        RowBox[{
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"2", "z"}]],
+          DisplayForm], 
+         AdjustmentBox["\[Bullet]",
+          BoxMargins->{{-0.3, 0}, {0, 0}}], 
+         TagBox[
+          SubscriptBox["I", 
+           RowBox[{"3", "y"}]],
+          DisplayForm]}],
+        DisplayForm], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         TagBox[
+          RowBox[{
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"1", "x"}]],
+            DisplayForm], 
+           AdjustmentBox["\[Bullet]",
+            BoxMargins->{{-0.3, 0}, {0, 0}}], 
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"2", "y"}]],
+            DisplayForm], 
+           AdjustmentBox["\[Bullet]",
+            BoxMargins->{{-0.3, 0}, {0, 0}}], 
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"3", "z"}]],
+            DisplayForm]}],
+          DisplayForm], ")"}]}], "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         TagBox[
+          RowBox[{
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"1", "y"}]],
+            DisplayForm], 
+           AdjustmentBox["\[Bullet]",
+            BoxMargins->{{-0.3, 0}, {0, 0}}], 
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"2", "x"}]],
+            DisplayForm], 
+           AdjustmentBox["\[Bullet]",
+            BoxMargins->{{-0.3, 0}, {0, 0}}], 
+           TagBox[
+            SubscriptBox["I", 
+             RowBox[{"3", "z"}]],
+            DisplayForm]}],
+          DisplayForm], ")"}]}]}], ")"}], " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"t", " ", "\[Omega]IS"}], "]"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.882980480761965*^9, 3.882981206193802*^9, 
+  3.9019867636856594`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"ea03c8e7-9382-4488-8ab9-071b5046fab0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Rho]", "=", 
+  RowBox[{
+   RowBox[{"\[Rho]t", "/.", 
+    RowBox[{
+     RowBox[{"t", " ", "\[Omega]IS"}], "\[Rule]", "\[Pi]"}]}], "//", 
+   "FullSimplify"}]}]], "Input",
+ CellChangeTimes->{3.8829807416781597`*^9},
+ CellLabel->"In[18]:=",ExpressionUUID->"8cf3cc58-fc7d-42a7-a986-87af025de1aa"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     TagBox[
+      RowBox[{
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"1", "z"}]],
+        DisplayForm], 
+       AdjustmentBox["\[Bullet]",
+        BoxMargins->{{-0.3, 0}, {0, 0}}], 
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"2", "z"}]],
+        DisplayForm]}],
+      DisplayForm], "+", 
+     TagBox[
+      RowBox[{
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"1", "z"}]],
+        DisplayForm], 
+       AdjustmentBox["\[Bullet]",
+        BoxMargins->{{-0.3, 0}, {0, 0}}], 
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"2", "z"}]],
+        DisplayForm], 
+       AdjustmentBox["\[Bullet]",
+        BoxMargins->{{-0.3, 0}, {0, 0}}], 
+       TagBox[
+        SubscriptBox["I", 
+         RowBox[{"3", "x"}]],
+        DisplayForm]}],
+      DisplayForm]}], ")"}]}], "-", 
+  FractionBox[
+   TagBox[
+    SubscriptBox["I", 
+     RowBox[{"3", "x"}]],
+    DisplayForm], "2"]}]], "Output",
+ CellChangeTimes->{3.882980528622984*^9, 3.8829807434971805`*^9, 
+  3.882981211939737*^9, 3.901986775582724*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"beaabf2e-5e15-4b6d-8d23-ce4dfd65da34"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.882980751220643*^9, 
+  3.8829807963278284`*^9}},ExpressionUUID->"0c2ed080-cbc9-455a-ba78-\
+d222a68f497c"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9019977082887077`*^9, 
+  3.901997708298208*^9}},ExpressionUUID->"4dad490e-23d7-4f06-b3b5-\
+d8d5b9503e50"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.8829807049850235`*^9, 3.88298073635256*^9}, 
+   3.882980772634612*^9},ExpressionUUID->"9e32ddbe-35c2-4a5a-875c-\
+1633f33c0d4c"]
+},
+WindowSize->{1904, 981},
+WindowMargins->{{10, Automatic}, {Automatic, 4}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"36d93921-5b12-4c4b-b371-5ed9a64e0b58"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 264, 7, 28, "Input",ExpressionUUID->"2aa63143-c97d-497b-b8d3-5360f92f0762"],
+Cell[847, 31, 1923, 34, 109, "Output",ExpressionUUID->"cc9531cd-72d9-421b-b2ad-10bba95e4feb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2807, 70, 200, 3, 28, "Input",ExpressionUUID->"04ff80a1-551a-4daa-a0c6-e226cbaf18de"],
+Cell[3010, 75, 400, 9, 34, "Print",ExpressionUUID->"e0cdc2c8-2dc3-45a7-a300-60cbdc13a160"],
+Cell[3413, 86, 740, 14, 23, "Message",ExpressionUUID->"2e636532-42be-46bc-a833-556f118447ff"],
+Cell[4156, 102, 418, 9, 23, "Message",ExpressionUUID->"c997e513-ac69-495f-888b-c38367b27147"],
+Cell[4577, 113, 746, 14, 23, "Message",ExpressionUUID->"e5e7ec5d-767e-4db8-aebf-ddec28f8bc42"],
+Cell[5326, 129, 627, 12, 23, "Message",ExpressionUUID->"25d44ef3-7996-4d4f-8795-f58b9b00fee8"]
+}, Open  ]],
+Cell[5968, 144, 184, 4, 28, "Input",ExpressionUUID->"f6b7445d-6eaa-4831-8508-35b354d5f2e1"],
+Cell[CellGroupData[{
+Cell[6177, 152, 144, 2, 28, "Input",ExpressionUUID->"9e5093a9-0226-4115-abcc-c522cb8e3cb7"],
+Cell[6324, 156, 789, 15, 40, "Message",ExpressionUUID->"df148f6d-1edf-4b03-8622-a4e2755c9432"],
+Cell[7116, 173, 925, 17, 40, "Message",ExpressionUUID->"e07780aa-8b45-4efb-a028-928e24eb178b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8078, 195, 1432, 42, 86, "Input",ExpressionUUID->"7645fad9-ee66-43ae-b190-00fdf666c5ac"],
+Cell[9513, 239, 347, 8, 34, "Output",ExpressionUUID->"d6929d39-1a23-436c-b18a-b6b8dfd5274e"],
+Cell[9863, 249, 1380, 49, 35, "Output",ExpressionUUID->"60d99751-4a27-4990-8ebf-4570861423d4"],
+Cell[11246, 300, 596, 18, 34, "Output",ExpressionUUID->"6c97a802-a404-45a2-8402-82eb6cafbe5f"],
+Cell[11845, 320, 1929, 70, 35, "Output",ExpressionUUID->"decffcf5-d920-44cc-8cf5-e5a250fad35f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13811, 395, 659, 19, 28, "Input",ExpressionUUID->"4dde6a83-62a4-4385-8a37-8ed197514f78"],
+Cell[14473, 416, 1189, 47, 35, "Output",ExpressionUUID->"7ed3071e-a6a5-4d08-9f9e-ca6e4d09df23"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15699, 468, 443, 10, 28, "Input",ExpressionUUID->"89dcced3-6ab8-423d-b99e-2575b1425ee2"],
+Cell[16145, 480, 5034, 165, 36, "Output",ExpressionUUID->"786a1a0a-a7d2-4f2c-9a5a-fbd95e1de3c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21216, 650, 370, 9, 28, "Input",ExpressionUUID->"b4b078ee-3aed-40cc-951c-a19823042022"],
+Cell[21589, 661, 2425, 87, 35, "Output",ExpressionUUID->"28be5192-e865-47f0-9355-a036babae94a"]
+}, Open  ]],
+Cell[24029, 751, 184, 3, 28, "Input",ExpressionUUID->"15481267-4e90-4cce-b502-ad8ec9027184"],
+Cell[CellGroupData[{
+Cell[24238, 758, 408, 10, 28, "Input",ExpressionUUID->"aee0db42-0179-47cf-a08f-82360bdc51a9"],
+Cell[24649, 770, 19446, 609, 73, "Output",ExpressionUUID->"d54b16c4-14e4-46b7-afe7-e86dec7f5450"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44132, 1384, 400, 9, 28, "Input",ExpressionUUID->"0419c7a0-8cc7-4c1a-8711-c0f38c3970c1"],
+Cell[44535, 1395, 5432, 183, 35, "Output",ExpressionUUID->"d18f6b7a-e9f9-4bad-b615-14921e6b5768"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50004, 1583, 282, 5, 28, "Input",ExpressionUUID->"3f63de1d-7042-4ba4-a658-f6df4cb42b5d"],
+Cell[50289, 1590, 5398, 183, 35, "Output",ExpressionUUID->"ab70c3fe-ca84-4490-b6d6-7ca7992f5d1d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55724, 1778, 217, 4, 28, "Input",ExpressionUUID->"2a135ffe-cefc-4377-9b87-acf07ac05db0"],
+Cell[55944, 1784, 5366, 182, 35, "Output",ExpressionUUID->"974c3a0e-31b6-450c-b93b-46d16ba74440"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61347, 1971, 569, 16, 28, "Input",ExpressionUUID->"837c9a47-1a75-443f-9d49-e56728bd0c27"],
+Cell[61919, 1989, 2057, 75, 49, "Output",ExpressionUUID->"eeebb1dd-474d-4889-8237-84b6f1ba3ddf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64013, 2069, 315, 8, 28, "Input",ExpressionUUID->"9bbe450c-6dd9-4f6c-a1ac-045816d9750d"],
+Cell[64331, 2079, 15539, 506, 87, "Output",ExpressionUUID->"71930852-8891-4d5f-821d-d6b1a7bb269d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[79907, 2590, 338, 8, 28, "Input",ExpressionUUID->"047ba63a-df34-4e1e-b02c-94e5b2d5368b"],
+Cell[80248, 2600, 4760, 167, 49, "Output",ExpressionUUID->"ea03c8e7-9382-4488-8ab9-071b5046fab0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[85045, 2772, 317, 8, 28, "Input",ExpressionUUID->"8cf3cc58-fc7d-42a7-a986-87af025de1aa"],
+Cell[85365, 2782, 1205, 44, 49, "Output",ExpressionUUID->"beaabf2e-5e15-4b6d-8d23-ce4dfd65da34"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[86607, 2831, 154, 3, 28, "Input",ExpressionUUID->"0c2ed080-cbc9-455a-ba78-d222a68f497c"],
+Cell[86764, 2836, 154, 3, 28, InheritFromParent,ExpressionUUID->"4dad490e-23d7-4f06-b3b5-d8d5b9503e50"]
+}, Open  ]],
+Cell[86933, 2842, 195, 3, 48, "Input",ExpressionUUID->"9e32ddbe-35c2-4a5a-875c-1633f33c0d4c"]
+}
+]
+*)
+
