@@ -11,8 +11,6 @@
 
 #include <Avance.incl>
 
-;define list<delay> vd_list=<$VDLIST>
-
 "d11=30m"
 
 1 ze
@@ -29,7 +27,7 @@
 
   (p2 pl2 ph1):f2  ;inital hard pulse
   (p3:sp3 ph2):f2  ;ADRF pulse
-  (p5 pl5 ph2):f1  ;ARRF pulse
+  (p5 pl5 ph2):f1  ;CP pulse
   1u cpds2:f2 		;pl12 is used here with tppm, spinal, pl13 with cwlg, cwlgs
   go=2 ph31
   1m do:f2
