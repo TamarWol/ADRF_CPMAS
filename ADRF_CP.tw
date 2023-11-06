@@ -15,7 +15,7 @@
 
 1 ze
 2 d1 do:f2
-   (p11:sp0 ph10):f1  ;saturation pulses
+   (p11:sp0 ph10):f1  ;saturation pulses on f1
   1m
   (p11:sp0 ph11):f1
   1m
