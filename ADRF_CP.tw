@@ -1,0 +1,70 @@
+;ADRF_CP
+;avance-version (20/01/09)
+; Tamar Wolf (Sept 2021)
+;
+;$CLASS=HighRes
+;$DIM=2D
+;$TYPE=
+;$SUBTYPE=
+;$COMMENT=
+
+
+#include <Avance.incl>
+
+;define list<delay> vd_list=<$VDLIST>
+
+"d11=30m"
+
+1 ze
+2 d1 do:f2
+   (p11:sp0 ph10):f1  ;saturation pulses
+  1m
+  (p11:sp0 ph11):f1
+  1m
+  (p11:sp0 ph12):f1
+  1m
+  (p11:sp0 ph13):f1
+  1m
+  (p11:sp0 ph14):f1
+
+  (p2 pl2 ph1):f2  ;inital hard pulse
+  (p3:sp3 ph2):f2  ;ADRF pulse
+  (p5 pl5 ph2):f1  ;ARRF pulse
+  1u cpds2:f2 		;pl12 is used here with tppm, spinal, pl13 with cwlg, cwlgs
+  go=2 ph31
+  1m do:f2
+  d11 wr #0
+HaltAcqu, 1m
+exit
+
+ph1=0 2;
+ph2=1;
+ph31=0 2;
+
+ph10=0
+ph11=1
+ph12=1
+ph13=3
+ph14=2
+
+
+;p1 : not used
+;p2 : 1H 90 degree high power pulse
+;pl2 : 1H 90 pulse amplitude
+;pl12 : power level for standard proton decoupling e.g. spinal64
+;p3 : ADRF pulse length
+;pl3 : ADRF amplitude
+;p4 : ARRF pulse length
+;pl4 : ARRF amplitude
+;sp0 : WURST saturation pulse shape
+;sp3 : ADRF pulse shape
+;sp4 : ARRF pulse shape
+;p5 : X contact pulse length
+;pl5 : X contact pulse power
+;p11 : saturation pulse length
+;d1 : relaxation delay; 1-5 * T1
+;d2 : spin diffusion delay
+;d11: delay for disk I/O
+;ns: 2 * n
+;l9 : number of PROSPR loops
+;cnst25 : transmitter offset, Hz -- array this parameter in a popt to run PROSPR experiment
