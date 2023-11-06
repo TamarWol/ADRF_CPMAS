@@ -52,17 +52,11 @@ ph14=2
 ;pl12 : power level for standard proton decoupling e.g. spinal64
 ;p3 : ADRF pulse length
 ;pl3 : ADRF amplitude
-;p4 : ARRF pulse length
-;pl4 : ARRF amplitude
-;sp0 : WURST saturation pulse shape
+;sp0 : saturation pulse shape
 ;sp3 : ADRF pulse shape
-;sp4 : ARRF pulse shape
 ;p5 : X contact pulse length
 ;pl5 : X contact pulse power
 ;p11 : saturation pulse length
 ;d1 : relaxation delay; 1-5 * T1
-;d2 : spin diffusion delay
 ;d11: delay for disk I/O
 ;ns: 2 * n
-;l9 : number of PROSPR loops
-;cnst25 : transmitter offset, Hz -- array this parameter in a popt to run PROSPR experiment
