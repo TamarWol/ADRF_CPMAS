@@ -29,12 +29,10 @@ par {
   proton_frequency      800e6
   start_operator  	  I1x+I2x+I3x+I4x
   detect_operator       I5p
-  variable rf           80000.0
    verbose            	0100
   conjugate_fid         true
 #ADRF/ARRF power
   variable w1max        2000
-  #80000.0
 # ADRF/ARRF pulse length
   variable tp           10000.0
 # number of steps defining the ADRF/ARRF pulses
