@@ -46,13 +46,9 @@ proc pulseq {} {
   global par
   
 
-#  time increment in ADRF/ARRF                  
+#  time increment in ADRF                  
   set dt    [expr $par(tp)/$par(step)]
-# 90 pulse length
-  set p90   [expr 0.25e6/$par(rf)]
-#spin difussion delay
-  set tsd   1000.0
-# ARRF contact time
+# CP contact time
   set cp    10000.0
   
   matrix set 1 totalcoherence {{0}}
